@@ -1,0 +1,25 @@
+Lender,Max Loan Amount (EUR),Max LTV ratio,Max DTI ratio,Interest Rate
+Bank of Europe - Premier Option,300000,0.85,0.47,3.6
+BNP Paribas particuliers - Premier Option,400000,0.9,0.35,2.7
+Credit du Nord - Premier Option,600000,0.9,0.43,3.6
+Banque Arkea - Premier Option,500000,0.9,0.47,3.6
+SEB Sweden - Premier Option,400000,0.95,0.35,3
+Nordea - Premier Option,300000,0.9,0.47,3.15
+iBank - Premier Option,500000,0.85,0.46,3.15
+Goldman MBS - Premier Option,500000,0.8,0.4,3.6
+Citi MBS - Premier Option,400000,0.9,0.47,3.6
+Pekao Bank - Premier Option,400000,0.85,0.42,3.45
+PKO Bank Polski- Premier Option,300000,0.85,0.47,3.45
+Chase Bank - Premier Option,500000,0.9,0.41,3.15
+Bank of Europe - Starter Option,300000,0.85,0.39,4.35
+BNP Paribas particuliers - Starter Option,300000,0.8,0.44,3.9
+Credit du Nord - Starter Option,300000,0.85,0.45,4.35
+Banque Arkea - Starter Option,200000,0.9,0.37,4.2
+SEB Sweden - Starter Option,300000,0.85,0.36,4.05
+Nordea - Starter Option,100000,0.85,0.47,4.5
+iBank - Starter Option,300000,0.9,0.4,3.9
+Goldman MBS - Starter Option,100000,0.8,0.43,4.35
+Citi MBS - Starter Option,300000,0.8,0.39,4.05
+Pekao Bank - Starter Option,100000,0.9,0.38,3.75
+PKO Bank Polski- Starter Option,200000,0.85,0.46,4.2
+Chase Bank - Starter Option,100000,0.8,0.35,4.35
