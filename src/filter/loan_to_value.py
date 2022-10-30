@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """Loan to Value Filter.
-This script filters the bank list by the applicant's maximum home loan
+This script filters the bank list by the user's maximum home loan
 to home value ratio.
 """
 

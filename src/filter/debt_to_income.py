@@ -1,15 +1,14 @@
 # -*- coding: utf-8 -*-
 """Debt to Income Filter.
-This script filters the bank list by the applicant's
+This script filters the bank list by the user's
 maximum debt-to-income ratio.
 """
-
 
 def filter_debt_to_income(monthly_debt_ratio, bank_list):
     """Filters the bank list by the maximum debt-to-income ratio allowed by the bank.
     Args:
         monthly_debt_ratio (float): The applicant's monthly debt ratio.
-        bank_list (list of lists): The available bank loans.
+        bank_list (list of lists): The available bank loans from the csv file.
     Returns:
         A list of qualifying bank loans.
     """
