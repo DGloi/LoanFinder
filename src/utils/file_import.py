@@ -9,3 +9,12 @@ def import_csv(path_csv):
     A list of lists that contains the data from the CSV file 
  
     """
+    with open(path_csv,"r") as csvfile:
+        data=[]
+        csvreader=csv.reader(csvfile,delimiter=",")
+        next(csvreader)
+        for row in csvreader:
+            data.append(row)
+    return data
+
+
