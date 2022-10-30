@@ -15,7 +15,8 @@ from pathlib import Path
 
 from utils.file_import import import_csv
 from calc.calculations import (
-    
+    monthly_debt_ratio,
+    loan_to_value_ratio
 )
 from filter.debt_to_income import filter_debt_to_income
 from filter.loan_to_value import filter_loan_to_value
