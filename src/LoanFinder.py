@@ -45,7 +45,16 @@ def banks_data():
     return import_csv(csvpath)
 
 
-def elligible_loans:
+def elligible_loans(banks_data,debt,income,loan_amount,home_value):
+    
+    #calculate user's debt ratio and
+    debt_ratio=monthly_debt_ratio(debt,income)
+    print(f"The monthly debt to income ratio is {debt_ratio:.02f}")
+    loan_to_value=loan_to_value_ratio(loan_amount,home_value)
+    print(f"The loan to value ration is {loan_to_value:.02f}")
+
+
+
     return 
 
 
