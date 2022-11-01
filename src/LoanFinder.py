@@ -53,9 +53,14 @@ def elligible_loans(banks_data,debt,income,loan_amount,home_value):
     loan_to_value=loan_to_value_ratio(loan_amount,home_value)
     print(f"The loan to value ration is {loan_to_value:.02f}")
 
+    #filter bank data applicable
+    filtered_bank_data=filter_max_loan_size(loan_amount,banks_data) 
+    filtered_bank_data=filter_loan_to_value(loan_to_value,filtered_bank_data)
+    filtered_bank_data=filter_debt_to_income(debt_ratio,filtered_bank_data)
 
+    print(f"Found {len(filtered_bank_data)} qualifying loans")
 
-    return 
+    return filtered_bank_data 
 
 
 
