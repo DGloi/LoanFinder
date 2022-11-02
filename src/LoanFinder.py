@@ -64,8 +64,13 @@ def elligible_loans(banks_data,debt,income,loan_amount,home_value):
 
 def saving_filtered_data():
 
-    if len
-
+    if len (elligible_loans)== 0:
+        sys.exit ("It seems that in your current situation, you are not elligible for any loans in the provided list..")
+    if len (elligible_loans)>=1:
+        action=q.select(
+        "Do you want to save your list of qualifying loans as a .csv file?", choices=["yes", "no"],).ask()
+    if action="yes":
+        save_csv=q.text("Enter a file path to a rate-sheet (.csv):").ask()
 
 
 def run_app():
