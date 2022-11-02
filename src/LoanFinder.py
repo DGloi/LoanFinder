@@ -62,15 +62,17 @@ def elligible_loans(banks_data,debt,income,loan_amount,home_value):
 
     return filtered_bank_data 
 
+def saving_filtered_data():
 
+    if len
 
 
 
 def run_app():
     debt,income,loan_amount,home_value=get_user_info()
+    elligible_loan=elligible_loan(banks_data,debt,income,loan_amount,home_value)
+    saving_filtered_data(elligible_loan)
 
-    sentence="Thanks for using LoanFinder, we hope you found what you need."
-    return sentence 
 
 
 if __name__=="__main__":
