@@ -39,7 +39,9 @@ def get_user_info():
 
 def banks_data():
     csvpath=q.text("Please provide banks info file location (.csv) ")
-    csvpath=Path(csvpath)
+    csvpath=Path(csvpath)  
+    
+
     if not csvpath.exists():
         sys.exit(f"File not found on this  directory: {csvpath}")
     return import_csv(csvpath)
@@ -62,21 +64,21 @@ def elligible_loans(banks_data,debt,income,loan_amount,home_value):
 
     return filtered_bank_data 
 
-def saving_filtered_data():
+def saving_elligible_loans():
 
-    if len (elligible_loans)== 0:
+    if len (filtered_bank_data)== 0:
         sys.exit ("It seems that in your current situation, you are not elligible for any loans in the provided list..")
-    if len (elligible_loans)>=1:
+    if len (elligible_loans_lists)>=1:
         action=q.select(
         "Do you want to save your list of qualifying loans as a .csv file?", choices=["yes", "no"],).ask()
-    if action="yes":
+    if action =="yes":
         save_csv=q.text("Enter a file path to a rate-sheet (.csv):").ask()
 
 
 def run_app():
     debt,income,loan_amount,home_value=get_user_info()
-    elligible_loan=elligible_loan(banks_data,debt,income,loan_amount,home_value)
-    saving_filtered_data(elligible_loan)
+    elligible_loans_list=elligible_loans(banks_data,debt,income,loan_amount,home_value)
+    saving_elligible_loans(elligible_loans_list)
 
 
 
