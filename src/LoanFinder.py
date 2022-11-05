@@ -5,14 +5,12 @@ on which a user can apply, depending on his project and his financial situation.
 """
 
 #importing libraries
-from email import header
+from importlib.resources import path
 import sys
 import csv
-from turtle import end_fill
 import fire
 import questionary as q
 from pathlib import Path
-import time
 
 #importing created functions
 
@@ -78,6 +76,7 @@ def saving_elligible_loans(elligible_loans_list):
         if action =="yes":
 
             save_csv=q.text("Enter a file path to a rate-sheet (.csv):").ask()
+            save_csv=Path(save_csv)
             header=[
                 "Bank","Max loan amount","Max Loan to value ratio","Max debt to income ratio","Interest rate"
                 ]
@@ -91,11 +90,11 @@ def saving_elligible_loans(elligible_loans_list):
                 csvwriter.writerow(elligible_loan)
             
             print(f"Your list of potential loans is to be found here: {save_csv} ")
-            time.sleep(4)
+            print("We hope you liked using our app, see you soon.")
             sys.exit
 
             if not save_csv.exists():
-                sys.exit(f"Sorry, this pqth does not exist: {save_csv}")
+                sys.exit(f"Sorry, this path does not exist: {save_csv}")
 
         elif action=="no":
             sys.exit("Thanks for using the App, we hope to see you soon")
