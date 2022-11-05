@@ -37,8 +37,8 @@ def get_user_info():
     return debt,income,loan_amount,home_value
 
 
-def banks_data():
-    csvpath=q.text("Please provide banks info file location (.csv) ")
+def import_banks_data():
+    csvpath=q.text("Please provide banks info file location (.csv) ").ask()
     csvpath=Path(csvpath)  
     
 
@@ -64,20 +64,31 @@ def elligible_loans(banks_data,debt,income,loan_amount,home_value):
 
     return filtered_bank_data 
 
-def saving_elligible_loans():
+def saving_elligible_loans(elligible_loans_list):
 
-    if len (filtered_bank_data)== 0:
+    if len (elligible_loans_list)== 0:
         sys.exit ("It seems that in your current situation, you are not elligible for any loans in the provided list..")
-    if len (elligible_loans_lists)>=1:
+    if len (elligible_loans_list)>=1:
         action=q.select(
         "Do you want to save your list of qualifying loans as a .csv file?", choices=["yes", "no"],).ask()
-    if action =="yes":
-        save_csv=q.text("Enter a file path to a rate-sheet (.csv):").ask()
+
+        if action =="yes":
+            save_csv=q.text("Enter a file path to a rate-sheet (.csv):").ask()
+        if action=="no":
+            sys.exit("Thanks for using the App, we hope to see you soon")
+        
 
 
 def run_app():
+
+    banks_data=import_banks_data()
+    
     debt,income,loan_amount,home_value=get_user_info()
-    elligible_loans_list=elligible_loans(banks_data,debt,income,loan_amount,home_value)
+
+    elligible_loans_list=elligible_loans(
+        banks_data,debt,income,loan_amount,home_value
+        )
+
     saving_elligible_loans(elligible_loans_list)
 
 
