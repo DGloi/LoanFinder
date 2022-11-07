@@ -29,7 +29,7 @@ Basically, any organisation providing loans to individuals will look for several
 Roughly: the biggest factors will be concerning the loan amount, the home value, how much monney you make and how much you already spend on debt repayment.
 
 
-Please find below 
+See here a demonstration of the app:
 
 ![ezgif com-gif-maker](https://user-images.githubusercontent.com/93589158/200135738-49e48a61-7abd-4b57-9bd3-621ab86c6a07.gif)
 
