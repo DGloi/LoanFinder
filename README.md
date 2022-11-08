@@ -7,7 +7,7 @@ Will it make your financial situation any better ? Probably not ...
 Nevertheless, we propose this tiny app on terminal to find loans that you are elligible to apply to. Test it out !
 
 
-NB: The database used here is made out of fictive data, used only for developpement, ideally linking this app to a broader dynamic database would acutally allow the app to be fully usable.
+NB: The database used here is made out of fictive data, used only for developpement. Ideally linking this app to a broader dynamic database would acutally allow the app to be fully functionnal.
 
 
 ---
